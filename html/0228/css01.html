@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스타일시트 적용1</title>
+<link type="text/css" rel="stylesheet" href="css/mystyle.css"></link>		<!-- p태그는 적용 우선처리 순서는 p3>p2>p1이라서 p1 조건이 가장 마지막에 적용됨 -->
+	<style>		
+		body												
+		p{
+			color: blue;				
+			color: yellow;
+			color: red;
+		}
+		p2{
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>p태그 적용</h1>
+	<p>CSS가 중복 정의된 경우 어떤것이 적용될까?</p>					<!-- 위에 스타일 p태그애서 컬러가 여러개 적용될 경우 마지막 조건으로 출력됨 -->
+	
+	<p1 style="color:red;">인라인 스타일 적용</p1><br>		<!-- 태그안에 바로 스타일 설정해줌 -->
+	<p2>내부 스타일 적용</p2><br>								<!-- 타이틀 밑이 스타일 태그 입력 -->
+	<p3 >외부 스타일 적용</p3><br>							
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>폼 태그 종류</title>
+</head>
+<body>
+	<h2>폼 양식을 만드는 태그1</h2>
+	<!-- method="get" -->
+	<form name="f" method="get" action="#">			<!-- 일반적으로 action="serverControl.jsp" 지금은 연습중이니까 action="#" -->
+		이름 : <input type="text" name="name"><br>
+		나이 : <input type="text" name="age"><br>
+		<input type="reset" value="재작성"><input type="submit" value="로그인">
+	</form>
+	<br>
+	<!-- method="post" -->
+		<form name="d" method="post" action="#">
+		이름 : <input type="text" name="name"><br>
+		나이 : <input type="text" name="age"><br>
+		<input type="reset" value="재작성"><input type="submit" value="로그인">
+	</form>
+	<br>
+	<!-- value 설정하기 -->
+	<form name="s" method="get" action="#">
+		<input type="hidden" name="code">											<!-- hidden : name이 client가 안보이게 전송할 때 -->
+		이름 : <input type="text" name="name" autofocus="autofocus"><br>				<!-- 자동 커서 위치설정해두기 -->
+		나이 : <input type="text" name="age" value="20" readonly><br>					<!-- value : Default값 미리 입력 -->
+		입력내용 : <input type="text" name="content" value="000" disabled><br>			<!-- readonly : 값 변경 불가 disabled : 비활성화 시킴 -->
+		패스워드 : <input type="password" name="pass"><br>
+		ID : <input type="text" name="id" size="15" required="required"><br>		<!-- required : 필수 입력사항 제약조건 -->
+		PW : <input type="text" name="pass2" size="15" placeholder="비밀번호""><br>	<!-- placeholder : 자리에 text 띄어둘 수 있음 -->
+		<hr/>
+		<h2>본문내용 : 긴 글자를 작성</h2>
+		<textarea rows="5" cols="50">
+		텍스트 입력공간
+		</textarea>
+		<hr/>			
+		<h2>라디오 radio 입력</h2>										<!-- radio type은 중복선택 불가 -->
+		당신의 혈액형은 : 												<!-- 각 radio는 value 값으로 구분 -->
+		<input type="radio" name="blood" value="A" checked>A형		<!-- checked : 미리 선택해두기 -->
+		<input type="radio" name="blood" value="B">B형
+		<input type="radio" name="blood" value="AB">AB형
+		<input type="radio" name="blood" value="O">O형
+		<br>
+		RH : 														
+		<input type="radio" name="bloodRh" value="+">+형
+		<input type="radio" name="bloodRh" value="-">-형
+		
+		<h2>체크박스 checkbox 입력</h2>									<!-- checkbox는 복수선택 가능 -->
+		여러분의 취미(복수선택가능) : 
+		<input type="checkbox" name="hobby" value="1">잠		
+		<input type="checkbox" name="hobby" value="2">놀기		
+		<input type="checkbox" name="hobby" value="3">게임	
+		<input type="checkbox" name="hobby" value="4">독서	
+		<hr>
+		<h2>선택 목록 : 펼침목록</h2>
+		웹 개발 취업을 하기위해서 선택해야 하는 필수 과목은? 
+			<select name="subjects">		<!-- <select name="subjects" multiple> : 중복선택 가능 -->
+				<option value="1">HTML5</option> 
+				<option value="2">CSS</option> 
+				<option value="3">Javascript</option> 
+				<option value="4">jQuery</option> 
+				<option value="5">JAVA</option> 
+				<option value="6">JSP/Servlet</option> 
+				<option value="7">DATABASE</option> 
+				<option value="8">SPRING FRAMEWORK</option> 
+				<option value="9">프로젝트</option> 
+			</select>
+			<hr>
+			<input type="color" value="00ff00">		<!-- 색상 선택가능  -->
+			<hr>
+			<h2>그래프</h2>
+			김소진 : <meter min="0" max="100" optimum="50" value="90">60 out of 100</meter>	<!-- optimum : 최적값 설정 -->
+			프로그래서 : <progress value="22" max="100" title="진행율"></progress>
+			<hr>
+			<input type="file">												<!-- 파일 선택 -->
+			<hr>
+			<input type="range" name="point" min="0" max="100">	
+		<input type="reset" value="재작성"><input type="submit" value="로그인">
+
+	</form>
+	
+	
+	
+	<hr>
+	
+	<!--  -->
+	
+	<div align="center">
+	<form name="a" method="post" action="#">
+	<h2>위에서 배운거 종합해서 연습해보기</h2>
+	<table border="1" width="700" height="450">		<!-- http://blog.daum.net/lelisabeth/3141 : 색상코드표 링크 -->
+		<tr bgcolor="7ba87b">			
+			<td align="center" colspan="2">회원 기본 정보</td>
+		</tr>
+		<tr>
+			<td>아이디</td>
+			<td><input type="text" name="id" autofocus="autofocus"> 4~12자의 영문 대소문자와 숫자로만 입력</td>
+		</tr>	
+		<tr>
+			<td>비밀번호</td>
+			<td><input type="password" name="pass"> 4~12자의 영문 대소문자와 숫자로만 입력</td>
+		</tr>	
+		<tr>
+			<td>비밀번호 확인</td>
+			<td><input type="password" name="passcheck"></td>
+		</tr>	
+		<tr>
+			<td>메일주소</td>
+			<td><input type="email" name="email"> 예id@domain.com</td>
+		</tr>	
+		<tr>
+			<td>이름</td>
+			<td><input type="text" name="name"></td>
+		</tr>	
+		<tr>
+			<td align="center" colspan="2" bgcolor="7ba87b">개인 신상 번호</td>
+		</tr>	
+		<tr>
+			<td>주민등록번호</td>
+			<td><input type="text" name="idpass"> 예)000000-0000000</td>
+		</tr>	
+		
+		<tr>
+			<td>생일</td>
+			<td><input type="number" name="birthday">
+				<select name="month">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				</select>
+				월
+				<select name="day">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				</select>
+				일
+				</td>
+		</tr>	
+		<tr>
+			<td>관심분야</td>
+			<td>
+			<input type="checkbox" name="computer" value="1">컴퓨터
+			<input type="checkbox" name="internet" value="2">인터넷	
+			<input type="checkbox" name="trip" value="3">여행
+			<input type="checkbox" name="movie" value="4">영화감상
+			<input type="checkbox" name="music" value="5">음악감상
+			</td>
+		</tr>	
+		<tr>
+			<td>자기소개</td>
+			<td><textarea rows="5" cols="50"></textarea></td>
+		</tr>	
+	</table>
+	<br>
+	<input type="submit" value="회원가입"> 
+	<input type="reset" value="다시입력">
+	
+	</form>
+	</div>
+	
+	
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>박스에 그림자 효과 주기</title>
+<!-- BoxShadow1 -->
+<head>
+ <style>
+ body {
+ font-weight: bold;
+ font-size: 12pt;
+ }
+ .boxshadow1 {
+ background-color: yellow;
+ border: 5px solid blue;
+ box-shadow: 10px 10px 0px teal;
+ }
+ .boxshadow2 {
+ background-color: orange;
+ border: 5px solid red;
+ box-shadow: 20px 20px 50px red;
+ }
+ .boxshadow3 {
+ background-color: silver;
+ border: 5px solid black;
+ box-shadow: 20px 20px 30px -20px maroon;
+ }
+ .boxshadow4 {
+ background-color: lime;
+ border: 5px solid olive;
+ box-shadow: 10px 10px 0px 10px fuchsia inset;
+ }
+ </style>
+</head>
+<body>
+ <h1 class="boxshadow1">박스 그림자 스타일링 예제 1</h1>
+ <h1 class="boxshadow2">박스 그림자 스타일링 예제 2</h1>
+ <h1 class="boxshadow3">박스 그림자 스타일링 예제 3</h1>
+ <h1 class="boxshadow4">박스 그림자 스타일링 예제 4</h1>
+</body>
+
+<!-- BoxShadow2 -->
+<head>
+ <style>
+ div {
+ width: 200px;
+ height: 50px;
+ padding: 10px;
+ margin: 30px;
+ }
+ #bs1 {
+ border: 1px solid rgba(102,186,255,0.4);
+ box-shadow: 0px 0px 20px 10px rgba(102,186,255,0.4);
+ }
+ #bs2 {
+ border: 1px solid black;
+ box-shadow: 10px 10px #BCE55C, 20px 20px #CEF279, 30px 30px #E4F7BA;
+ }
+ </style>
+</head>
+<body>
+ <div id="bs1">
+ <h3>박스 그림자 특수 효과1</h3>
+ </div>
+ <div id="bs2">
+ <h3>박스 그림자 특수 효과2</h3>
+ </div>
+</body>
+
+<!-- BoxShadow3 -->
+<head>
+ <style>
+ img {
+ padding: 20px;
+ margin: 20px;
+ }
+ .shadow1 { /* Bottom right coner */
+ box-shadow: 5px 5px 10px #000;
+ }
+ .shadow2 { /* Up right coner */
+ box-shadow: 5px -5px 10px #000;
+ }
+ </style>
+</head>
+<body>
+ <img src="../images/poca.png" class="shadow1">
+ <img src="../images/cola.png" class="shadow2">
+</body>
+
+</html>

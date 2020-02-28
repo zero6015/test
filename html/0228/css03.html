@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>클래스 선택자 및 id 선택자 사용하기</title>
+	<style>
+		#id1{
+			color: olive;
+		}
+		#id2{
+			color: purple;
+		}
+		h2#id1{
+			color: orange;
+		}
+		.class1{
+			color: blue;
+			background-color: yellow;
+		}
+		.class2{
+			color: red;
+			background-color: green;
+		}
+		h3.class1{
+			color: navy;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="id1">id 선택자 적용</h1>					<!-- h2태그에 특정한 id를 적용시키고 싶다면 style에 h2#id1을 새로 작성해주면 됨 -->
+	<h1 id="id2">id 선택자 적용</h1>
+	<h2 id="id1">id 선택자 적용</h1>
+	<hr>
+	<h1 class="class1">당신의 나이는 현재 ....</h1>
+	<p class="class2">26</p>
+	<h1 class="class1">당신의 키는...</h1>
+	<p class="class2">156</p>
+	<h3 class="class1">보통사람입니다.</h3>				<!-- h3태그에 특정한 class를 적용시키고 싶다면 style에 h3.class1를 새로 작성해주면 됨 -->
+	
+</body>
+</html>

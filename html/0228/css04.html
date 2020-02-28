@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가상선택자</title>
+								<!-- 
+									a:link{ color: black; text-decoration: underline;}    --a:link : 링크 스타일 설정
+									a:visited {color: red;}								  --a:visited : 링크 사이트 이미 방문한 경우에 스타일 
+									a:hover { text-decoration: overline;}				  --a:hover : 마우스가 링크부분에 올라갔을 때 바뀌는 스타일
+									a:active { background: yellow;}						  --a:active : 마우스로 프레스 시에 링크부분 스타일 바뀜
+								 -->
+<style>
+	a:link{ color: black; text-decoration: underline;}
+	a:visited {color: red;}
+	a:hover { text-decoration: overline;}
+	a:active { background: yellow;}
+	
+	div.d1{
+		border: 1px dashed red;
+		width: 400px;
+		padding: 5px;
+	}
+	div.d1:hover {
+		border: 1px solid red;
+		width: 800px;
+		padding: 50px;
+		background-color: blue;
+		color: white;
+	}
+	div.d2 {
+		border: 1px dashed gray;
+		width: 400px;
+		padding: 5px;
+	}
+</style>
+</head>
+<body>
+	<h2>마우스 이벤트에 대한 이해</h2>
+	<p><a href="css03.html">선택자이동</a>&nbsp;링크의 변화</p>
+	<div class="d1">
+		<h3>가상 클래스 1 영역</h3>
+		마우스 위치에 따른 박스의 스타일 변화를 보세요.
+	</div>
+	<br>
+	<div class="d2">
+		<h3>가상 클래스 2 영역</h3>
+		마우스 위치에 따른 박스의 스타일 변화를 보세요22.
+	</div>
+</body>
+</html>
