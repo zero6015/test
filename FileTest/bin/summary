@@ -1,0 +1,79 @@
+File class
+
+파일을 처리하기 위한 기능을 제공하는 클래스
+
+파일 처리의 기본
+1. 보조기억 장치(하드디스크)의 파일을 메모리로 적재(로드)
+ -> 파일 오픈(file open)
+ = new로 파일 인스턴스를 생성
+2. 오픈된 파일 사용(읽기/쓰기)
+3. 메모리의 파일을 보조기억 장치로 이동(언로드)
+ -> 파일 클로즈(file close)
+ 
+주요 메소드
+ 1. exists()
+   파일 또는 폴더의 존재 유무 확인 
+   활용 방안 : 지정한 파일/폴더가 없을 경우 새로 만들기 등..
+ 2. isFile()/isDirectory()
+   파일인지 폴더인지 구분. 결과는 boolean(true/false)
+ 3. isHidden()
+   숨김 파일/폴더인지 구분.
+ 4. length()
+   파일의 크기를 구하는데 사용.
+ 5. createNewFile()
+   하드디스크에 파일 인스턴스에 해당하는 실제 파일을 생성.
+   활용 방안 : exists()로 확인 하여 없을 경우 이 메소드로 생성.
+ 6. delete()
+   하드디스크에 저장되어 있는 실제 파일/폴더를 삭제.
+ 7. mkdir()
+   하드디스크에 실제 폴더를 생성.
+ 8. getPath()
+   상대 경로 찾기.
+ 9. getAbsolutePath()
+   절대 경로 찾기.
+ 10. list() 
+   폴더의 파일/서브폴더 목록 가져오기
+   
+Stream(스트림) : 흐름
+
+입력스트림(InputStream) : 외부로부터 프로그램으로 
+	데이터를 받기 위한 스트림(객체).
+출력스트림(OutputStream) : 프로그램에서 외부로
+	데이터를 보내기 위한 스트림(객체).
+	
+스트림은 주 스트림(byte 단위)과 보조 스트림으로 구분.
+
+파일 입출력 기본 스트림 : FileInputStream/FileOutputStream
+  FileInputStream : 파일의 내용을 byte 단위로 읽어옴.
+  주요 메소드 read() : byte 단위로 읽기.
+  FileOutputStream : 저장할 내용을 byte 단위로 파일에 저장
+  주요 메소드 write() : byte 단위로 쓰기.
+ 
+
+문자 단위 입출력 스트림
+  FileReader, FileWriter 클래스
+  파일(text)의 문자 단위로 데이터를 읽어오거나 
+  저장하는 스트림.
+  영문일 경우 1byte, 한글 등은 2byte로 읽어옴.
+  (지정된 문자셋에 맞는 크기로 읽어옴.)
+  
+  주요 메소드는 stream 클래스와 같음.
+  
+  FileWriter는 쓰기 모드에 두가지가 있음.
+  덮어쓰기 모드(기본), 추가 모드(선택)
+  FileWriter 인스턴스 생성 시 true/false 지정
+  예) FileWriter fw = new FileWriter("파일명", true);
+  true : 추가 모드. 새로운 내용을 기존 내용 뒤에 붙임.
+  false(기본) : 덮어쓰기 모드. 기존 내용을 지우고
+  				새로운 내용만 저장. 
+  
+
+
+
+
+
+
+
+
+
+
